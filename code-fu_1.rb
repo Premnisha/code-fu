@@ -2,8 +2,8 @@
 puts "Enter a list of numbers"
 element_array = gets
 list_array = element_array.split.map(&:to_i)
-first_max = -999
-second_max = -1000
+first_max = -9999999
+second_max = -10000000
 for element in list_array
   if(element!=first_max && element!=second_max && first_max!=second_max)
     if (element > second_max)
@@ -16,4 +16,8 @@ for element in list_array
     end
   end
 end
-puts "Second max #{second_max}"
+if ((second_max!=-9999999) && (second_max!=-10000000))
+  puts "Second max #{second_max}"
+else
+  puts "Second max is nil"
+end
